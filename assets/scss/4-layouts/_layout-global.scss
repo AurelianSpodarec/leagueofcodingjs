@@ -1,0 +1,16 @@
+// ==========================================================================
+// #Layout Global
+// ==========================================================================
+
+
+// Containers
+.container {
+	@extend %container;
+	@extend %container-default;
+}
+ 
+.container-fluid {
+	@extend %container;
+	max-width: 80%;
+}
+ 

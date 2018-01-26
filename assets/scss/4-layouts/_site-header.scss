@@ -1,0 +1,39 @@
+// ==========================================================================
+// #Site Header
+// ==========================================================================
+
+.site-header {
+    @include clearfix;
+    background-color: #252527;
+    z-index: 9000;
+
+    &__inner {
+        @include clearfix;
+    }
+
+    &__head {
+        padding: .6em 2.3em;
+        @include clearfix;
+    }
+
+    &__logo-wrapper {
+        float: left;
+    }
+    
+    &__logo {
+        font-size: 2.5em;
+    }
+
+    &__logo-icon {
+
+    }
+
+    &__hamburger {
+        float: right;
+
+        &--bar {
+
+        }
+    }
+
+}
