@@ -10,10 +10,11 @@
     -ms-flex: 1;
     flex: 1;
     width: 100%;
+    z-index: 40;
     position: relative;
 
     &--picture {
-		@include absolute(top 0 right 0 bottom 0 left 0);
+		@include fixed(top 0 right 0 bottom 0 left 0);
 		z-index: -30;
 	}
 

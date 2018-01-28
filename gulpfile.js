@@ -29,8 +29,8 @@ var gulp            = require('gulp'),
 var config = {
     scss    :[ 'assets/scss/**/*.scss' ],
     css     :[ 'public/css/' ],
+    js      :[ 'assets/js/*.js' ],
     html    :[ './*.html' ],
-    build   :[ '.' ],
     assets  :[ 'assets/' ]
 };
 
@@ -39,16 +39,30 @@ var config = {
 // COMPILE JS and CSS
 // BROWSER SYNC
 
+// gulp.task('minifyjs', function(cb) {
+//   pump([
+//         gulp.src('assets/js/*.js'),
+//         uglify(),
+//         gulp.dest('public/js/')
+//     ],
+//     cb
+//   );
+// });
+
 gulp.task('minifyjs', function(cb) {
   pump([
+        gulp.src(config.js),
+        sourcemaps.init(),
         gulp.src('assets/js/*.js'),
         uglify(),
-        gulp.dest('public/js/')
+        rename({suffix: '.min'}),
+        sourcemaps.write(),
+        gulp.dest('public/js/'),
+        reload({stream:true})
     ],
     cb
   );
 });
-
 
 // ////////////////////////////////////////////////
 //
@@ -56,7 +70,7 @@ gulp.task('minifyjs', function(cb) {
 //
 // // /////////////////////////////////////////////
 
-gulp.task('app',function(){
+gulp.task('app',function() {
 
     return gulp.src(config.scss)
         .pipe(sourcemaps.init())
@@ -68,7 +82,6 @@ gulp.task('app',function(){
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(''+config.css+''))
         .pipe(reload({stream:true}));
-
 });
 
 
@@ -103,41 +116,6 @@ gulp.task('browserSync', function() {
 
 
 
-// ////////////////////////////////////////////////
-//
-// Build Tasks
-// Create build, clean un-neccesary files and folders
-//
-// // /////////////////////////////////////////////
-
-gulp.task('build:create', function(){
-    return gulp.src(config.assets+'**/*')
-               .pipe(gulp.dest(''+config.build+''));
-});
-
-// gulp.task('build:clean',['build:create'], function(){
-//     return del(['build/bower_components/',
-//                 'build/scss/',
-//                 'build/css/!(*.min.css)',
-//                 'build/js/!(*.min.js)'
-//               ]);
-// });
-
-// gulp.task('build:start', function() {
-//     browserSync({
-//         server: {
-//             baseDir: config.build
-//         }
-//     });
-// });
-
-// gulp.task('build:delete', function(res){
-//     return del([config.build+'/**'], res);
-// });
-
-//  gulp.task('build', ['build:create', 'build:clean']);
-
-
 
 // ////////////////////////////////////////////////
 //
@@ -149,6 +127,8 @@ gulp.task('build:create', function(){
 gulp.task ('watch', function(){
 
   gulp.watch(config.scss, ['app']);
+
+  gulp.watch(config.js, ['minifyjs']);
 
   gulp.watch(config.html, ['html']);
 

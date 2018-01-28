@@ -41,4 +41,6 @@
 	background-image: url(http://blog.teamtreehouse.com/wp-content/themes/treehouse-treehouse-blog-reboot-d52be032409979219bf3dc804312e918a26a251c/img/footer.svg);
 	height: 7px;
 	width: 100%;
+	position: relative;
+	z-index: 2000;
 }

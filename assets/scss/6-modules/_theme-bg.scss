@@ -1,0 +1,36 @@
+// ==========================================================================
+// #Theme Background
+// ==========================================================================
+
+.theme-bg {
+
+	&__item {
+		width: 50%;
+		height: 430px;
+		overflow: hidden;
+		border-radius: 23px;
+		cursor: pointer;
+		border: 2px solid transparent;
+		float: left;
+
+		&:hover {
+			border-color: red;
+		}
+
+		&.is-active {
+			border-color: gold;
+		}
+
+		@include media-query(medium) {
+			width: 33.3333%;
+			height: 120px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+	}
+
+}

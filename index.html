@@ -14,11 +14,13 @@
 </head>
 <body>
 
-	<div class="stripe-rainbow"></div>
+
 
     <!-- Header
     ================================================== -->
     <header class="site-header">
+    <div class="stripe-rainbow"></div>
+
     <div class="site-header__inner">
 
     	<div class="site-header__head">
@@ -88,6 +90,13 @@
         </a>
         </li>
 
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="calculator.html">
+            <i class="site-nav__icon fa fa-calculator" aria-hidden="true"></i>
+            <span class="site-nav__text">Calculator</span>
+        </a>
+        </li>
+
 
 	</ul>
 	</nav>
@@ -104,7 +113,7 @@
 
         <h1>Settings <span>As you Wish</span></h1>
 
-    	<section>
+    	<section class="section--medium">
     		<h3>Select Theme</h3>
 
     		<label type="text" >Default</label>
@@ -112,20 +121,40 @@
 
     	</section>
 
-    	<section>
+    	<section class="section--medium">
     	<h3>Select Theme Backgrounsd</h3>
-    	<ul>
+    	<ul class="theme-bg__list">
 
-    		<li>
-
+    		<li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('http://wallpaperhdn.com/wp-content/uploads/36595473-balloon-wallpaper.jpeg');"></div>
     		</li>
 
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('http://gipsypixel.com/wp-content/uploads/2017/11/Star-Wars-Lightsaber-Wallpaper-Backgrounds-High-Quality-Of-Laptop-Hd.jpg');"></div>
+            </li>
 
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://www.desktopbackground.org/p/2015/08/04/989815_purple-haze-wallpaper_2560x1600_h.jpg');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('http://gipsypixel.com/wp-content/uploads/2017/11/Star-Wars-Lightsaber-Wallpaper-Backgrounds-High-Quality-Of-Laptop-Hd.jpg');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://images.pexels.com/photos/402687/pexels-photo-402687.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');"></div>
+            </li>
+
+        </ul>
     	</section>
 
-        <section>
+        <section class="section--medium">
             <h3>Clear Local Storage</h3>
-            <p>This will erease any data you put in this WebApp and set everything to default</p>
+            <p>Erease any data you put in this WebApp and set everything to default<input type="checkbox"></p>
         </section>
 
 
@@ -138,7 +167,7 @@
 
     <!-- Scripts
     ================================================== -->
-    <script type="text/javascript" src="public/js/scripts.js"></script>
+    <script type="text/javascript" src="public/js/app.min.js"></script>
 
 </body>
 </html>
