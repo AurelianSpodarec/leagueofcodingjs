@@ -129,41 +129,79 @@ window.onload = function() {
 	var schemeColorOptions = document.querySelectorAll('.scheme-color__option');
 	var schemeColorRadio = document.querySelectorAll('.scheme-color__option input');
 
-	// Click on the option, add class is-active and check it's children input
+	var schemeColorPalette = document.querySelectorAll('.scheme-color__palette');
+	var schemeColorPaletteBlock = document.querySelectorAll('.scheme-color__palette td');
+	// Get the pallete td background style and set it to the current one
 
-	// schemeColorList.addEventListener('click', function(e) {
-	// 	e.stopImmediatePropagation()
-	// 	if(e.target.className === 'scheme-color__option') {
-	// 		e.stopImmediatePropagation()
-	// 		for (var i = 0; i < schemeColorOptions.length; i++) {
-	// 			var optionItem = schemeColorOptions[i];
+	
+
+	// for (var i = 0; i < schemeColorOptions.length; i++) {
+	// 	var optionItem = schemeColorOptions[i];
+
+	// 	optionItem.addEventListener('click', function(e) {
+	// 		//e.stopImmediatePropagation();
+	// 		for (var j = 0; j < schemeColorOptions.length; j++) {
+	// 			var optionItem = schemeColorOptions[j];
 	// 			optionItem.checked = false;
 	// 			optionItem.classList.remove('is-selected');
 	// 		}
-	// 		e.target.children[0].checked = true;
-	// 		e.target.classList.add('is-selected');
+	// 		this.children[0].checked = true;
+	// 		this.classList.add('is-selected');
+	// 		if (optionItem.className === 'is-selected') {
+	// 			var s = schemeColorPaletteBlock.style.backgroundColor;
+	// 			console.log(s);
+	// 		}
+	// 	});
 
-	// 	}
+	// };
 
-	// 	// If the children as hit, add the option class is-selected
+	schemeColorList.addEventListener('click', function(e) {
 
-	// });
-
-	for (var i = 0; i < schemeColorOptions.length; i++) {
-		var optionItem = schemeColorOptions[i];
-
-		optionItem.addEventListener('click', function(e) {
-			e.stopImmediatePropagation();
+		if(e.target.className === "scheme-color__option") {
 			for (var j = 0; j < schemeColorOptions.length; j++) {
 				var optionItem = schemeColorOptions[j];
 				optionItem.checked = false;
 				optionItem.classList.remove('is-selected');
 			}
-			this.children[0].checked = true;
-			this.classList.add('is-selected');
-		});
+			e.target.classList.add('is-selected');
+			e.target.children[0].checked = true;
+			
+			var selectedColor = document.querySelector('.scheme-color__option.is-selected').children[2];
+			 
+			var colors = selectedColor.querySelectorAll('.scheme-color__palette td');
+			for (i = 0; i < colors.length; i++) {
+			    var pColor = colors[0].style.backgroundColor;
+			    var sColor = colors[1].style.backgroundColor;
+			    var tColor = colors[2].style.backgroundColor;
+			    var qColor = colors[3].style.backgroundColor;
+			}
 
-	};
+			  var styleSheets = document.styleSheets;
+
+        for (var i = 0; i < styleSheets.length; i++) {
+            var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+
+            for (var j = 0; j < rules.length; j++) {
+
+            	 if(rules[j].selectorText === ".site-header") {
+                	rules[j].style.backgroundColor = pColor;
+                } else if (rules[j].selectorText === ".site-nav") {
+                	rules[j].style.backgroundColor = sColor;
+                	rules[j].style.borderColor = tColor;
+                } else if (rules[j].selectorText === ".site-nav__link:hover") {
+                	rules[j].style.backgroundColor = pColor;
+                }
+               
+            }
+        }
+		}  			 
+	});
+					
+
+
+
+      
+  
 
 
 
