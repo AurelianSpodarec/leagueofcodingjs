@@ -19,10 +19,10 @@ window.onload = function() {
 	//	Change Theme Background
 	//
 	///////////////////////////////////////////
- 	var mainThemeBg = document.querySelector('.main--picture');
- 	var mainThemeBgList = document.querySelector('.theme-bg__list');
- 	var items = mainThemeBgList.children;
- 	var activeItem;
+ 	var mainThemeBg = document.querySelector('.main--picture'),
+ 		mainThemeBgList = document.querySelector('.theme-bg__list'),
+ 		items = mainThemeBgList.children,
+ 		activeItem;
 
  	mainThemeBgList.addEventListener('mouseover', function(e) {
  		
@@ -47,60 +47,152 @@ window.onload = function() {
  	});
 
 
- 	var listItems  = document.querySelectorAll('.theme-bg__item')
+	var listItems  = document.querySelectorAll('.theme-bg__item')
 
 	for(var i = 0; i < listItems.length; i++){
 
-	 mainThemeBgList.addEventListener('mouseleave', function() {
-	  	var imageItem = document.querySelector('.theme-bg__item.is-active');
+		mainThemeBgList.addEventListener('mouseleave', function() {
+			var imageItem = document.querySelector('.theme-bg__item.is-active');
 
-	    var image = imageItem.children[0].style.backgroundImage;
-		mainThemeBg.style.backgroundImage = image;
-	  })
+			var image = imageItem.children[0].style.backgroundImage;
+			mainThemeBg.style.backgroundImage = image;
+		})
 	}
 
- 	// mainThemeBgList.addEventListener('mouseout', function(e) {
- 	// 		// with class active set the image
- 	// 		//var activeImg = 
- 	// 		//var itemss = theme-bg__list.children;
- 	// 		var itemsss = document.querySelectorAll('theme-bg__item');
- 	// 		var activeItem = document.querySelector('is-active');
 
- 	// 		if(items.className === 'is-active') {
- 	// 			var img = items.childNodes[0].style.backgroundImage;
- 	// 			mainThemeBg.style.backgroundImage = img;
- 	// 			console.log(img);
- 	// 		}
+	///////////////////////////////////////////
+	//
+	//	Change Global Font Size
+	//
+	///////////////////////////////////////////
+	// Get Stylesheets
+	// Get the body delete the font size
+	// On Body add the new font size with the value
 
- 	// 		// Parent node == active
- 	// 		// var img = e.target;
- 	// 		// var item = img.parentNode;
-
- 	// 		// if(item.className === 'is-active') {
- 	// 		// 	itemImg = img.style.backgroundImage;
- 	// 		// 	console.log(e.itemImg);
- 	// 		// 	mainThemeBg.style.backgroundImage = itemImg;
- 	// 		// }
-
- 	// 		// for (var i = 0; i < items.length; i++) {
-	 // 		// 	if (items[i].className === 'is-active') {
+	// Get the value off the options
+	// var styleSheetList = document.styleSheets;
+	// var bodyFont = document.querySelector('body');
+	// //var globalFontSelect = document.querySelector('')
 	 		
-	 // 		// 		var itemImg = items[i].style.backgroundImage;
- 	// 		// 		mainThemeBg.style.backgroundImage = itemImg;
- 	// 		// 	}
-	 // 		// }
- 	// 		//if(items.className === 'is-active') {
- 	// 			//console.log(e.items);
- 	// 			// for(var i = 0; i < items.length; i++) {
- 	// 			// 	var item = items[i];
- 	// 			// 	var itemImg = item.style.backgroundImage;
- 	// 			// 	mainThemeBg.style.backgroundImage = itemImg;
- 	// 			// }
-	 // 		// 	var getImg = items.style.backgroundImage;
-		// 		// mainThemeBg.style.backgroundImage = getImg;
-		// 	//}
- 		 
- 	// });
+
+	// var element = document.querySelector('body'),
+ //    style = window.getComputedStyle(element),
+ //    fontSize = style.removeProperty('font-size');
+
+
+	// var css = [];
+
+	// for (var i=0; i<document.styleSheets.length; i++) {
+	//     var sheet = document.styleSheets[i];
+
+	//     var rules = ('cssRules' in sheet)? sheet.cssRules : sheet.rules;
+
+	//     if (rules) {
+	//         css.push('\n/* Stylesheet : '+(sheet.href||'[inline styles]')+' */');
+	//         for (var j=0; j<rules.length; j++) {
+	//             var rule = rules[j];
+	//             if ('cssText' in rule)
+	//                 css.push(rule.cssText);
+	//             else
+	//                 css.push(rule.selectorText+' {\n'+rule.style.cssText+'\n}\n');
+	//         }
+	//     }
+	// }
+	// var cssInline = css.join('\n')+'\n';
+	// console.log(cssInline);
+
+
+
+	// var allCSS = [].slice.call(document.styleSheets)
+ //        .reduce(function (prev, styleSheet) {
+ //            if (styleSheet.cssRules) {
+ //                return prev +
+ //                    [].slice.call(styleSheet.cssRules)
+ //                        .reduce(function (prev, cssRule) {
+ //                            return prev + cssRule.cssText;
+ //                        }, '');
+ //            } else {
+ //                return prev;
+ //            }
+ //        }, '');
+ //        console.log(allCSS);
+
+	//bodyFont.style.setProperty('font-size', '8px');
+	//bodyFont.CSSRule
+	//insertRule("body { font-size: 5px }", 0);
+	///////////////////////////////////////////
+	//
+	//	Change Color Scheme
+	//
+	///////////////////////////////////////////
+	var schemeColorList = document.querySelector('.scheme-color__list');
+	var schemeColorOptions = document.querySelectorAll('.scheme-color__option');
+	var schemeColorRadio = document.querySelectorAll('.scheme-color__option input');
+
+	// Click on the option, add class is-active and check it's children input
+
+	// schemeColorList.addEventListener('click', function(e) {
+	// 	e.stopImmediatePropagation()
+	// 	if(e.target.className === 'scheme-color__option') {
+	// 		e.stopImmediatePropagation()
+	// 		for (var i = 0; i < schemeColorOptions.length; i++) {
+	// 			var optionItem = schemeColorOptions[i];
+	// 			optionItem.checked = false;
+	// 			optionItem.classList.remove('is-selected');
+	// 		}
+	// 		e.target.children[0].checked = true;
+	// 		e.target.classList.add('is-selected');
+
+	// 	}
+
+	// 	// If the children as hit, add the option class is-selected
+
+	// });
+
+	for (var i = 0; i < schemeColorOptions.length; i++) {
+		var optionItem = schemeColorOptions[i];
+
+		optionItem.addEventListener('click', function(e) {
+			e.stopImmediatePropagation();
+			for (var j = 0; j < schemeColorOptions.length; j++) {
+				var optionItem = schemeColorOptions[j];
+				optionItem.checked = false;
+				optionItem.classList.remove('is-selected');
+			}
+			this.children[0].checked = true;
+			this.classList.add('is-selected');
+		});
+
+	};
+
+
+
+
+	///////////////////////////////////////////
+	//
+	//	Change Opacity of Card
+	//
+	///////////////////////////////////////////
+	var mainPageCard = document.querySelector('.main__page-card');
+	var opacityRange = document.querySelector('#opacity-card__range');
+	var opacityRangeDisplay = document.querySelector('.opacity-card__value');
+
+	//opacityRangeValue
+
+
+	opacityRange.addEventListener('mousemove', function(e) {
+		var opacityRangeValue = opacityRange.value;
+		opacityRangeDisplay.textContent = opacityRangeValue;
+		mainPageCard.style.backgroundColor =  "rgba(255,255,255, " + opacityRangeValue + ")"; //opacityRangeValue.value;
+	});
+
+	opacityRange.addEventListener('click', function(e) {
+		var opacityRangeValue = opacityRange.value;
+		opacityRangeDisplay.textContent = opacityRangeValue;
+	})
+	// opacityRangeValue.addEventListener('mouseup', function(){
+	// 	opacityRangeDisplay.textContent = opacityRangeValue;.
+	// });
 
 
 }

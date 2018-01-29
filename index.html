@@ -113,19 +113,119 @@
 
         <h1>Settings <span>As you Wish</span></h1>
 
-    	<section class="section--medium">
-    		<h3>Select Theme</h3>
+        <section class="section--medium">
+            <h3>Global Font Size</h3>
 
-    		<label type="text" >Default</label>
-    		<input type="checkbox">
+            <select class="global-font__select">
+                <option value="10px">10px</option>
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="default-15px"="selected">Default - 15px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+            </select>
+        </section>
+
+        <section class="section--medium">
+            <h3>Change Opacity of Card</h3>
+
+
+            <label id="opacity-card__display" for="opacity-card">Opacity: <span class="opacity-card__value">0.95</span></label>
+            <br>
+            <input id="opacity-card__range" name="opacity-card" type="range" min=0 max=1 value=0.95 step="0.01">
+        </section>
+
+    	<section class="section--medium">
+    		<h3>Choose Color Scheme</h3>
+
+            <div class="scheme-color__list">
+
+                <div class="scheme-color__option is-selected">
+        		<input type="radio" name="theme-color-input" id="theme-color-default" value="value">
+                <label for="theme-color-default">Default Color Scheme</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #252527;">&nbsp;</td>
+                        <td style="background-color: #373737;">&nbsp;</td>
+                        <td style="background-color: #232323;">&nbsp;</td>
+                        <td style="background-color: #eee333;">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-coffee" value="value">
+                <label for="theme-color-coffee">Coffee</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #46403c">&nbsp;</td>
+                        <td style="background-color: #59524c">&nbsp;</td>
+                        <td style="background-color: #c7a589">&nbsp;</td>
+                        <td style="background-color: #9ea476">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-midnight" value="value">
+                <label for="theme-color-midnight">Midnight</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                    <td style="background-color: #25282b">&nbsp;</td>
+                        <td style="background-color: #363b3f">&nbsp;</td>
+                        <td style="background-color: #69a8bb">&nbsp;</td>
+                        <td style="background-color: #e14d43">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-light" value="value">
+                <label for="theme-color-light">Professional</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #222">&nbsp;</td>
+                        <td style="background-color: #333">&nbsp;</td>
+                        <td style="background-color: #0073aa">&nbsp;</td>
+                        <td style="background-color: #00a0d2">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-sunrise" value="value">
+                <label for="theme-color-sunrise">Sunrise</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            </div><!-- /scheme-color list -->
 
     	</section>
 
     	<section class="section--medium">
-    	<h3>Select Theme Backgrounsd</h3>
+    	<h3>Choose a Background Theme</h3>
     	<ul class="theme-bg__list">
 
-    		<li class="theme-bg__item">
+    		<li class="theme-bg__item is-active">
                 <div class="theme-bg__img" style="background-image: url('http://wallpaperhdn.com/wp-content/uploads/36595473-balloon-wallpaper.jpeg');"></div>
     		</li>
 
