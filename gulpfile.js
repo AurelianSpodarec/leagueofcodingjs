@@ -15,6 +15,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     sourcemaps      = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     pump = require('pump');
 
 
@@ -53,16 +54,23 @@ gulp.task('minifyjs', function(cb) {
   pump([
         gulp.src(config.js),
         sourcemaps.init(),
-        gulp.src('assets/js/*.js'),
-        uglify(),
+        concat('app.js'),
+        
         rename({suffix: '.min'}),
         sourcemaps.write(),
+        uglify(),
         gulp.dest('public/js/'),
         reload({stream:true})
     ],
     cb
   );
 });
+
+// gulp.task('concatjs', function() {
+//   return gulp.src(config.js)
+//     .pipe(concat('all.js'))
+//     .pipe(gulp.dest('./dist/'));
+// });
 
 // ////////////////////////////////////////////////
 //

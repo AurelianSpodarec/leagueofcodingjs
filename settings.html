@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta, Title, Styles, Scripts
+    ================================================== -->
+    <meta name="charset" content="UTF-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width" />
+    <title>League of Coding</title>
+    <link rel="stylesheet" type="text/css" href="public/css/app.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+
+    <!-- Header
+    ================================================== -->
+    <header class="site-header">
+    <div class="stripe-rainbow"></div>
+
+    <div class="site-header__inner">
+
+    	<div class="site-header__head">
+    	<div class="site-header__logo-wrapper">
+       	<a href="#" class="site-header__logo">
+        	<i class="site-header__logo-icon fa fa-cube" aria-hidden="true"></i> League of Coding
+       	</a>
+       	</div>
+
+       	<button class="site-header__hamburger">
+            <span class="site-header__hamburger--bar"></span>
+       	</button>
+       	</div><!-- /site-header__head -->
+
+    </div>
+    </header>
+
+    <div class="all-site-wrap">
+
+
+
+
+    <!-- Main Nav -->
+    <nav class="site-nav" role="navigation">
+	<ul class="site-nav__list">
+
+
+		<li class="site-nav__item">
+        <a class="site-nav__link" href="index.html">
+            <i class="site-nav__icon fa fa-home" aria-hidden="true"></i>
+            <span class="site-nav__text">Home</span>
+        </a>
+        </li>
+
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="settings.html">
+            <i class="site-nav__icon fa fa-cog" aria-hidden="true"></i>
+            <span class="site-nav__text">Settings</span>
+        </a>
+        </li>
+
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="">
+            <i class="site-nav__icon fa fa-question-circle" aria-hidden="true"></i>
+            <span class="site-nav__text">About</span>
+        </a>
+        </li>
+
+		<li class="site-nav__item">
+        <a class="site-nav__link" href="index.html">
+            <i class="site-nav__icon fa fa-list" aria-hidden="true"></i>
+            <span class="site-nav__text">Coding Party</span>
+        </a>
+        </li>
+
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="quiz.html">
+            <i class="site-nav__icon fa fa-pencil-square-o" aria-hidden="true"></i>
+            <span class="site-nav__text">Quiz</span>
+        </a>
+        </li>
+
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="calculator.html">
+            <i class="site-nav__icon fa fa-calculator" aria-hidden="true"></i>
+            <span class="site-nav__text">Calculator</span>
+        </a>
+        </li>
+
+        <li class="site-nav__item">
+        <a class="site-nav__link" href="calculator.html">
+            <i class="site-nav__icon fa fa-calculator" aria-hidden="true"></i>
+            <span class="site-nav__text">Calculator</span>
+        </a>
+        </li>
+
+
+	</ul>
+	</nav>
+
+
+
+
+    <!-- Main
+    ================================================== -->
+    <main class="main">
+    <div class="main--picture" style="background: url(http://wallpaperhdn.com/wp-content/uploads/36595473-balloon-wallpaper.jpeg); background-size: cover; background-position: center center;"></div>
+
+    <div class="main__page-card">
+
+        <h1>Settings <span>As you Wish</span></h1>
+
+        <section class="section--medium">
+            <h3>Global Font Size</h3>
+
+            <select class="global-font__select">
+                <option value="10px">10px</option>
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="default-15px" selected>Default - 15px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+            </select>
+        </section>
+
+        <section class="section--medium">
+            <h3>Change Opacity of Card</h3>
+
+
+            <label id="opacity-card__display" for="opacity-card">Opacity: <span class="opacity-card__value">0.95</span></label>
+            <br>
+            <input id="opacity-card__range" name="opacity-card" type="range" min=0 max=1 value=0.95 step="0.01">
+        </section>
+
+    	<section class="section--medium">
+    		<h3>Choose Color Scheme</h3>
+
+            <div class="scheme-color__list">
+
+                <div class="scheme-color__option is-selected">
+        		<input type="radio" name="theme-color-input" id="theme-color-default" value="value">
+                <label for="theme-color-default">Default Color Scheme</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #252527;">&nbsp;</td>
+                        <td style="background-color: #373737;">&nbsp;</td>
+                        <td style="background-color: #232323;">&nbsp;</td>
+                        <td style="background-color: #eee333;">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-coffee" value="value">
+                <label for="theme-color-coffee">Coffee</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #46403c">&nbsp;</td>
+                        <td style="background-color: #59524c">&nbsp;</td>
+                        <td style="background-color: #c7a589">&nbsp;</td>
+                        <td style="background-color: #9ea476">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-midnight" value="value">
+                <label for="theme-color-midnight">Midnight</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                    <td style="background-color: #25282b">&nbsp;</td>
+                        <td style="background-color: #363b3f">&nbsp;</td>
+                        <td style="background-color: #69a8bb">&nbsp;</td>
+                        <td style="background-color: #e14d43">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-light" value="value">
+                <label for="theme-color-light">Professional</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #222">&nbsp;</td>
+                        <td style="background-color: #333">&nbsp;</td>
+                        <td style="background-color: #0073aa">&nbsp;</td>
+                        <td style="background-color: #00a0d2">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="scheme-color__option">
+                <input type="radio" name="theme-color-input" id="theme-color-sunrise" value="value">
+                <label for="theme-color-sunrise">Sunrise</label>
+                <table class="scheme-color__palette">
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                        <td style="background-color: #eee333;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+
+            </div><!-- /scheme-color list -->
+
+    	</section>
+
+    	<section class="section--medium">
+    	<h3>Choose a Background Theme</h3>
+    	<ul class="theme-bg__list">
+
+    		<li class="theme-bg__item is-active">
+                <div class="theme-bg__img" style="background-image: url('http://wallpaperhdn.com/wp-content/uploads/36595473-balloon-wallpaper.jpeg');"></div>
+    		</li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('http://gipsypixel.com/wp-content/uploads/2017/11/Star-Wars-Lightsaber-Wallpaper-Backgrounds-High-Quality-Of-Laptop-Hd.jpg');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://www.desktopbackground.org/p/2015/08/04/989815_purple-haze-wallpaper_2560x1600_h.jpg');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('http://gipsypixel.com/wp-content/uploads/2017/11/Star-Wars-Lightsaber-Wallpaper-Backgrounds-High-Quality-Of-Laptop-Hd.jpg');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');"></div>
+            </li>
+
+            <li class="theme-bg__item">
+                <div class="theme-bg__img" style="background-image: url('https://images.pexels.com/photos/402687/pexels-photo-402687.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');"></div>
+            </li>
+
+        </ul>
+    	</section>
+
+        <section class="section--medium">
+            <h3>Clear Local Storage</h3>
+            <p>Erease any data you put in this WebApp and set everything to default<input type="checkbox"></p>
+        </section>
+
+
+    </div>
+    </main>
+
+
+
+    </div><!-- /all-site-wrap -->
+
+    <!-- Scripts
+    ================================================== -->
+    <script type="text/javascript" src="public/js/app.min.js"></script>
+
+</body>
+</html>
