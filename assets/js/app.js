@@ -1,5 +1,4 @@
-window.onload = function() {
-	
+document.addEventListener('DOMContentLoaded', function() {
 	///////////////////////////////////////////
 	//
 	//	HAMBURGER MENU
@@ -106,4 +105,4 @@ window.onload = function() {
 					
 
 
-}
+});
