@@ -35,21 +35,6 @@ var config = {
     assets  :[ 'assets/' ]
 };
 
-// gulp.src(‘*.html’, {cwd: ‘.’})
-// SCSS to CSS
-// COMPILE JS and CSS
-// BROWSER SYNC
-
-// gulp.task('minifyjs', function(cb) {
-//   pump([
-//         gulp.src('assets/js/*.js'),
-//         uglify(),
-//         gulp.dest('public/js/')
-//     ],
-//     cb
-//   );
-// });
-
 gulp.task('minifyjs', function(cb) {
   pump([
         gulp.src(config.js),
@@ -66,11 +51,7 @@ gulp.task('minifyjs', function(cb) {
   );
 });
 
-// gulp.task('concatjs', function() {
-//   return gulp.src(config.js)
-//     .pipe(concat('all.js'))
-//     .pipe(gulp.dest('./dist/'));
-// });
+
 
 // ////////////////////////////////////////////////
 //
@@ -107,7 +88,6 @@ gulp.task('html', function(){
 
 
 
-
 // ////////////////////////////////////////////////
 //
 // Browser-Sync Tasks
@@ -121,7 +101,6 @@ gulp.task('browserSync', function() {
         },
     });
 });
-
 
 
 

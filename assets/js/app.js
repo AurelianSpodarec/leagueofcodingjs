@@ -14,7 +14,23 @@ window.onload = function() {
 	});
 
 
-	
+
+	///////////////////////////////////////////
+	//
+	//	Word Switcher
+	//
+	///////////////////////////////////////////
+	var displayWordSpan = document.querySelector('.switch-word__display');
+	var words = ['Coder', 'Creator', 'Entrepreneur', 'Teacher', 'Blogger'];
+
+	var i = 0;
+	setInterval(function(){		
+			 
+ 		displayWordSpan.innerHTML = words[i++];
+		if (i == words.length) i = 0; 
+
+	}, 1000);
+
 
 
 	///////////////////////////////////////////
@@ -45,8 +61,6 @@ window.onload = function() {
 	var schemeColorPaletteBlock = document.querySelectorAll('.scheme-color__palette td');
 
 
-			
-	 
 	schemeColorList.addEventListener('click', function(e) {
 		
 
@@ -90,15 +104,6 @@ window.onload = function() {
 		}  			 
 	});
 					
- 
-
-      
-  
-
-
-
-
-	
 
 
 }

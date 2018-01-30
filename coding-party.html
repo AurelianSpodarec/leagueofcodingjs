@@ -69,7 +69,7 @@
         </a>
         </li>
 
-        <li class="site-nav__item">
+		<li class="site-nav__item">
         <a class="site-nav__link" href="coding-party.html">
             <i class="site-nav__icon fa fa-list" aria-hidden="true"></i>
             <span class="site-nav__text">Coding Party</span>
@@ -108,12 +108,105 @@
     ================================================== -->
     <main class="main">
     <div class="main--picture" style="background: url(http://wallpaperhdn.com/wp-content/uploads/36595473-balloon-wallpaper.jpeg); background-size: cover; background-position: center center;"></div>
+  <div class="services-tab__list-topic">
+          <ul class="services-tab__nav">
 
+            <li class="services-tab__list-item">
+              <a href="#invited" class="services-tab__link-item is-active">
+                <span>Invited</span>
+                        
+              </a>
+            </li>
+
+            <li class="services-tab__list-item">
+              <a href="#going" class="services-tab__link-item">
+                <span>Going</span>
+              </a>
+            </li>
+
+            <li class="services-tab__list-item">
+              <a href="#notsure" class="services-tab__link-item">
+                <span>Not Sure</span>
+              </a>
+            </li>
+
+            <li class="services-tab__list-item">
+              <a href="#notgoing" class="services-tab__link-item">
+                <span>Not Going</span>
+              </a>
+            </li>
+<div class="list-options">
+            <li>
+                
+                <button class="btnDeleteSelected"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+            </li>
+
+            <li class="dropdown">
+                <span>More <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <ul class="sub-menu">
+                  <li><button class="btnMoveGoing">Move to Going</button></li>
+                  <li><button class="btnMoveNotSure">Move to Not Sure</button></li>
+                  <li><button class="btnMoveNotGoing">Move to Not Going</button></li>
+                </ul>
+            </li>
+ </div>
+          </ul>
+
+          <div>
+            <form id="registrar">
+            <input type="text" name="name" placeholder="Invite Someone">
+            <button type="submit" name="submit" value="submit">Submit</button>
+            </form>
+
+           
+
+
+          </div>
+          </div><!-- /list-topic -->
     <div class="main__page-card">
 
         
 
-        <h3>I am a <span style="background-color: brown; color: white;" class="switch-word__display"></span> that loves to create!</h3>
+        <section class="services-tab">
+        <div class="services-tab__container">
+
+        
+
+          <div class="services-tab__list-content">
+
+            <div id="invited" class="services-tab__tab-item is-visible">
+            <h2>Invited</h2>
+            <ul id="list-invited" class="party-lists">
+  
+            </ul> 
+            </div>
+
+            <div id="going" class="services-tab__tab-item">
+            <h2>Going to the party</h2>
+            <ul id="list-going" class="party-lists">
+                  
+            </ul>
+            </div>
+
+            <div id="notsure" class="services-tab__tab-item">
+            <h2>Not Sure</h2>
+            <ul id="list-not-sure" class="party-lists">
+  
+            </ul>
+            </div>
+
+            <div id="notgoing" class="services-tab__tab-item">
+            <h2>Not Going</h2>
+            <ul id="list-not-going" class="party-lists">
+              
+            </ul>
+            </div>
+
+          </div><!-- /services-tab__list-content -->
+
+        </div>
+        </section>
 
 
     </div>
